@@ -147,6 +147,11 @@ right:20px;
 </style>
 
 
+
+<style>header {flex-wrap:wrap;position: fixed;top:22px;width:100%;max-width:90%;left:50%;transform: translateX(-50%);display: flex;align-items:center;justify-content: space-around;gap:5px;z-index:1000;}header a {color:var(--text-color);text-decoration: none;font-size: 22px;}@media screen and (min-width:44em) {header {max-width: 60%;}header a {font-size:20px;}} </style>
+<style>.footer {flex-wrap:wrap;position: fixed;z-index:1000;bottom:0;left:50%;transform: translateX(-50%);width:100%;max-width:80%;gap:0;display: flex;align-items: end;justify-content: space-around;}.footer a {color: var(--text-color);text-decoration: none;font-size:15px;padding-bottom: 18px;}.footer p {padding:0;margin:0;font-size:15px;padding-bottom:18px;} @media screen and (min-width:44em) {.footer{max-width:90%;justify-content:space-between;}.footer a,.footer p {font-size:14px;}} </style>
+
+
 </head>
 <body>
 
@@ -258,6 +263,31 @@ function updateTextColor() {
 updateTextColor();
 
 </script>
+
+
+
+
+
+
+header>
+<a href="/">HOME</a>
+<a href="https://tour.khaliiil.com/">TOUR</a>
+<a href="https://music.khaliiil.com/">MUSIC</a>
+<a href="">100</a>
+<a href="/crt/">CRT</a>
+</header>
+
+<div class="footer">
+<a href="/join">JOIN</a>
+<a href="/terms-conditions">TERMS</a>
+<p style="display:none;">&copy; 2025</p>
+<a href="/privacy-policy">PRIVACY</a>
+</div>
+
+
+
+
+
 
 <main>
 {{ content }}
