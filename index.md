@@ -1,5 +1,5 @@
 ---
-layout: def
+layout: default
 title: Khalil
 author: "Khalil"
 date: 2024-05-11 10:00:00
