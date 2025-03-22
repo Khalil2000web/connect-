@@ -95,7 +95,7 @@ right:20px;
     .menu a:hover {color: #ccc;}
 
     .menu-btn {
-        display: block; /* Show button on mobile */
+        display: none; /* Show button on mobile */
     }
 
     .menu.active {
@@ -167,6 +167,7 @@ right:20px;
 
         <div class="footer-men">
             <a href="https://www.khaliiil.com/join">JOIN</a>
+            <p style="display:none;">&copy; 2025</p>
             <a href="https://khaliiil.com/terms-conditions/">TERMS</a>
             <a href="https://khaliiil.com/privacy-policy/">PRIVACY</a>
         </div>
@@ -205,10 +206,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".menu");
 
-    // Check if the menu was previously opened
     const isMenuOpen = localStorage.getItem("menuState") === "open";
 
-    // Set the menu state based on the saved value
     if (isMenuOpen) {
         menu.classList.add("active");
         menu.setAttribute("aria-hidden", "false");
