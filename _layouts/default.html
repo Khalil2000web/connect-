@@ -227,7 +227,12 @@ function updateTextColor() {
 
     // If background is 'transparent' or 'rgba(0, 0, 0, 0)', assume white
     if (bgColor === "transparent" || bgColor === "rgba(0, 0, 0, 0)") {
-        bgColor = "#fff"; // Default to white
+        bgColor = "rgb(255, 255, 255)"; // Default to white
+    }
+
+    // If the background color is set in rgba (e.g., rgba(0, 0, 0, 0)), convert it to rgb
+    if (bgColor.startsWith("rgba")) {
+        bgColor = bgColor.replace("rgba", "rgb").replace(/,\s*\d+\)/, ")");
     }
 
     // Convert RGB to determine if it's light or dark
@@ -242,7 +247,7 @@ function updateTextColor() {
 // Call function initially
 updateTextColor();
 
-// (Optional) Call again if background color changes dynamically
+// Optional: Call again if background color changes dynamically
 </script>
 
 <main>
