@@ -9,10 +9,8 @@ css:
 ---
 
 <form action="https://formspree.io/f/mldrezaz" method="POST">
-<label for="email">Your email:</label>
-<input required type="email" id="email" name="email">
-<label for="name">Your Name:</label>
-<input required type="text" id="name" name="name">
-<button id="subtn" type="submit">SEND</button> 
-<p>By submitting this form, you acknowledge that you have read and agreed to our <a href="https://khaliiil.com/terms-conditions">Terms & Conditions</a> and <a href="https://khaliiil.com/privacy-policy">Privacy Policy</a>. You also consent to the collection, use, and processing of your information in accordance with our policies.</p>
+<h2>SIGN UP NOW FOR THE LATEST INFO AND UPDATES</h2>
+<p>BY REGISTERING, I AGREE TO THE <a href="https://khaliiil.com/terms-conditions">TERMS & CONDITIONS</a> AND <a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a></p>
+<div class="input-container"><input required type="email" id="email" name="email" placeholder=" " autocomplete="off"><label for="email">EMAIL ADDRESS</label></div>
+<button id="subtn" type="submit">SEND</button>
 </form>
