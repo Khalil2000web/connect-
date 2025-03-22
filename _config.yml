@@ -1,0 +1,5 @@
+url: "https://connect.khaliiil.com"
+baseurl: ""
+
+plugins:
+  - jekyll-redirect-from
