@@ -222,13 +222,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 function updateTextColor() {
-    const bgColor = getComputedStyle(document.documentElement).getPropertyValue("--background-color").trim();
-    const isLight = bgColor === "white" || bgColor === "#fff" || bgColor === "rgb(255, 255, 255)";
+    // Get the computed background color of body
+    let bgColor = getComputedStyle(document.body).backgroundColor.trim();
+
+    // If background is 'transparent' or 'rgba(0, 0, 0, 0)', assume white
+    if (bgColor === "transparent" || bgColor === "rgba(0, 0, 0, 0)") {
+        bgColor = "#fff"; // Default to white
+    }
+
+    // Convert RGB to determine if it's light or dark
+    const rgb = bgColor.match(/\d+/g).map(Number);
+    const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+    const isLight = brightness > 128;
+
+    // Set text color based on brightness
     document.documentElement.style.setProperty("--text-color", isLight ? "black" : "white");
 }
 
-// Call function initially and whenever background color changes
+// Call function initially
 updateTextColor();
+
+// (Optional) Call again if background color changes dynamically
 </script>
 
 <main>
