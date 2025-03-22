@@ -147,9 +147,6 @@ right:20px;
 </style>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" />
-<script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" async></script>
-
 </head>
 <body>
 
@@ -159,9 +156,9 @@ right:20px;
         <a href="/hi">HI</a>
         <a href="/my">MY</a>
         <a href="/love">LOVE</a>
-        <a href="https://parfum.beyonce.com/">PARFUM</a>
-        <a href="https://cecred.com/">CÉCRED</a>
-        <a href="https://sirdavis.com/">SIRDAVIS</a>
+        <a href="/">PARFUM</a>
+        <a href="/">CÉCRED</a>
+        <a href="/">SIRDAVIS</a>
       </span>
 
         <div class="footer-men">
@@ -174,23 +171,23 @@ right:20px;
 </div>
 
 <div class="diskfooter">
-<a href="https://www.beyonce.com">
+<a href="">
 <p id="rights">
 JOIN
 </p>
 </a>
-<p id="cp">&copy;&nbsp;2024 BEYONCÉ</p>
-<a href="https://beencountry.com/">
+<p id="cp">&copy;&nbsp;2025 KHALIL</p>
+<a href="/">
 <p id="lefts">
 BEEN COUNTRY
 </p>
 </a>
-<a href="https://beyonce.com/terms-conditions">
+<a href="">
 <p id="lefts">
 TERMS
 </p>
 </a>
-<a href="https://beyonce.com/privacy-policy">
+<a href="">
 <p id="lefts">
 PRIVACY
 </p>
@@ -205,6 +202,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".menu-btn");
     const menu = document.querySelector(".menu");
 
+    // Check if the menu was previously opened
+    const isMenuOpen = localStorage.getItem("menuState") === "open";
+
+    // Set the menu state based on the saved value
+    if (isMenuOpen) {
+        menu.classList.add("active");
+        menu.setAttribute("aria-hidden", "false");
+        menuBtn.setAttribute("aria-expanded", "true");
+        menuBtn.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg>`;
+    }
 
     const toggleMenu = () => {
         const isMenuOpen = menu.classList.contains("active");
@@ -213,11 +220,13 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.setAttribute("aria-hidden", "true");
             menuBtn.setAttribute("aria-expanded", "false");
             menuBtn.innerHTML = `<svg viewBox="0 0 24 24" focusable="false" class="m196lzck" aria-hidden="true"><path fill="currentColor" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg>`;
+            localStorage.setItem("menuState", "closed");  // Save menu state as closed
         } else {
             menu.classList.add("active");
             menu.setAttribute("aria-hidden", "false");
             menuBtn.setAttribute("aria-expanded", "true");
             menuBtn.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg>`;
+            localStorage.setItem("menuState", "open");  // Save menu state as open
         }
     };
 
@@ -227,32 +236,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script>
 function updateTextColor() {
-    // Get the computed background color of body
+
     let bgColor = getComputedStyle(document.body).backgroundColor.trim();
 
-    // If background is 'transparent' or 'rgba(0, 0, 0, 0)', assume white
     if (bgColor === "transparent" || bgColor === "rgba(0, 0, 0, 0)") {
-        bgColor = "rgb(255, 255, 255)"; // Default to white
+        bgColor = "rgb(255, 255, 255)";
     }
 
-    // If the background color is set in rgba (e.g., rgba(0, 0, 0, 0)), convert it to rgb
     if (bgColor.startsWith("rgba")) {
         bgColor = bgColor.replace("rgba", "rgb").replace(/,\s*\d+\)/, ")");
     }
 
-    // Convert RGB to determine if it's light or dark
     const rgb = bgColor.match(/\d+/g).map(Number);
     const brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
     const isLight = brightness > 128;
 
-    // Set text color based on brightness
     document.documentElement.style.setProperty("--text-color", isLight ? "black" : "white");
 }
 
-// Call function initially
+
 updateTextColor();
 
-// Optional: Call again if background color changes dynamically
 </script>
 
 <main>
