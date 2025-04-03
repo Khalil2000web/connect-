@@ -20,6 +20,7 @@ css:
     <button id="subtn" type="submit">SEND</button>
 </form>
 
+<div class="bs38ha-m">
 <div class="expandable-row" onclick="toggleMessage(this)"><p class="left-text">MORE</p><p class="right-text">+</p></div>
 <div class="expandable-message">
     Subscribe to my newsletter for updates, insights, and exclusive content straight to your inbox.  
@@ -27,7 +28,7 @@ css:
     <a href="https://khaliiil.com/terms-conditions">TERMS & CONDITIONS</a> AND 
         <a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a>.  
     Unsubscribe anytime.
-</div>
+</div></div>
 
 <script>
 function toggleMessage(element) {
