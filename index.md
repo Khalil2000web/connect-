@@ -6,7 +6,7 @@ date: 2024-05-11 10:00:00
 last_modified_at: 2025-03-22 10:30:00
 ---
 
-<div class="sib-form" style="text-align:center; background-color:#000; margin-top:70px;">
+<div class="sib-form" style="text-align:center; background-color:#000;">
 <div id="sib-form-container" class="sib-form-container">
 <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949; max-width:350px;">
 <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
