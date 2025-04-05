@@ -45,7 +45,7 @@ last_modified_at: 2025-03-22 10:30:00
 <div class="form__entry entry_block">
 <div class="form__label-row">
 <label class="entry__label" style="text-align:left; font-family:'BB Manual Mono Regular', Arial, sans-serif; font-size:14px; font-weight:300; color:#fff; text-transform:uppercase; margin-top:40px;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
-<div class="entry__field" style="background-color:#000; border:none;">
+<div class="entry__field" style="background-color:#000; border-radius:0;border:none;">
 <input class="input" style="color:#fff; font-family:'BB Manual Mono Regular', Arial, sans-serif; background:#000; border:1px solid #fff; outline:none; border-radius:0;" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
 </div>
 </div>
