@@ -37,7 +37,7 @@ published: true
 <div style="padding:8px 0;">
 <div class="sib-form-block" style="font-size:11px; text-align:center; font-family:'BB Manual Mono Regular', Arial, sans-serif; color:#fff; background-color:transparent;">
 <div class="sib-text-form-block">
-<p>BY REGISTERING, I AGREE TO THE <a href="https://khaliiil.com/terms-conditions" target="_blank">TERMS &amp; CONDITIONS</a> AND <a href="https://khaliiil.com/privacy-policy" target="_blank">PRIVACY POLICY</a></p>
+<p>BY REGISTERING, I AGREE TO THE <a href="https://khaliil.com/terms-conditions" target="_blank">TERMS &amp; CONDITIONS</a> AND <a href="https://khaliil.com/privacy-policy" target="_blank">PRIVACY POLICY</a></p>
 </div>
 </div>
 </div>
