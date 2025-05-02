@@ -7,6 +7,7 @@ last_modified_at: 2025-05-2 23:30:00
 published: true
 ---
 
+
 <div class="sib-form" style="text-align:center; background-color:#000;padding-top:140px;">
   <div id="sib-form-container" class="sib-form-container">
     <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:350px;">
@@ -53,7 +54,7 @@ published: true
                     <input class="input" style="color:#fff; font-family:'BB Manual Mono Regular', Arial, sans-serif; background:#000; border:1px solid #fff; outline:none; border-radius:0;" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; font-family:'BB Manual Mono Regular', Arial, sans-serif; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>              </label>
+              <label class="entry__error entry__error--primary" style="font-size:16px; font-family:'BB Manual Mono Regular', Arial, sans-serif; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
               <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
                 Provide your email address to subscribe. For e.g abc@xyz.com
               </label>
@@ -69,7 +70,6 @@ published: true
             </button>
           </div>
         </div>
-
         <input type="text" name="email_address_check" value="" class="input--hidden">
         <input type="hidden" name="locale" value="en">
       </form>
