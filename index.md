@@ -5,6 +5,7 @@ author: "Khaliil"
 date: 2024-05-11 10:00:00
 last_modified_at: 2025-05-2 23:30:00
 published: true
+redirect_to: https://khaliil.com/join
 ---
 
 
